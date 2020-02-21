@@ -1,0 +1,3 @@
+ERROR: In C:\bbd\ecd3383f\build\superbuild\paraview\src\VTK\IO\XML\vtkXMLUnstructuredDataReader.cxx, line 649
+vtkXMLUnstructuredGridReader (0000025B767E4660): Error reading cell offsets: Unsupported array type: vtkUnsignedIntArray
+
