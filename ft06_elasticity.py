@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from ufl.operators import nabla_div
 import numpy as np
 
-#Scaled variables
+#Scaled variables 
 L = 1
 W = 0.2
 mu = 1
@@ -79,5 +79,3 @@ xdmf_file_mag = XDMFFile("elasticity/displacement_magnitude.xdmf")
 xdmf_file_mag.write(u_magnitude)
 
 print('min/max u:', u_magnitude.vector().get_local().min(), u_magnitude.vector().get_local().max())
-
-
