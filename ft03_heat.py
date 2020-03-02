@@ -1,8 +1,11 @@
 # Test Problem 1: A Known analytical solution
-
 from fenics import *
+import matplotlib as pltlib
+pltlib.use('Agg') # To be able to plot
 import matplotlib.pyplot as plt
+from ufl.operators import nabla_div
 import numpy as np
+
 
 T = 2
 num_steps = 10

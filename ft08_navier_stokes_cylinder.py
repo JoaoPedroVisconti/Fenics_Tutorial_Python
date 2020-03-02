@@ -111,8 +111,8 @@ xdmf_file_u = XDMFFile("navier_stokes_cylinder/navier_stokes_cylinder_u.xdmf")
 xdmf_file_p = XDMFFile("navier_stokes_cylinder/navier_stokes_cylinder_p.xdmf")
 
 # Create time series (for use in reaction_system.py)
-# timeseries_u = TimeSeries('navier_stokes_cylinder/navier_stokes_cylinder_u')
-# timeseries_p = TimeSeries('navier_stokes_cylinder/navier_stokes_cylinder_p')
+timeseries_u = TimeSeries('navier_stokes_cylinder/velocity_series')
+timeseries_p = TimeSeries('navier_stokes_cylinder/pressure_series')
 
 # Save mesh to file (for use in reaction_system.py)
 File('navier_stokes_cylinder/navier_stokes_cylinder.xml.gz') << mesh
@@ -152,8 +152,8 @@ for n in range(num_steps):
     xdmf_file_u.write(u_, t)
     xdmf_file_p.write(p_, t)
 
-    # timeseries_u.store(u_.vector(), t)
-    # timeseries_p.store(p_.vector(), t)
+    timeseries_u.store(u_.vector(), t)
+    timeseries_p.store(p_.vector(), t)
 
     # Update previous solution
     u_n.assign(u_)
