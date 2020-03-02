@@ -1,9 +1,10 @@
 from fenics import *
 import matplotlib as pltlib
-pltlib.use('Agg') # To be able to plot
-import matplotlib.pyplot as plt
-from ufl.operators import nabla_div
+pltlib.use('Agg')  # To be able to plot
 import numpy as np
+from ufl.operators import nabla_div
+import matplotlib.pyplot as plt
+
 
 T = 10                # Final time
 num_steps = 500       # Number of steps
@@ -74,13 +75,13 @@ def sigma(u, p):
 
 
 # Step 1
-F1 = rho * dot((u - u_n)/k , v) * dx + \
+F1 = rho * dot((u - u_n)/k, v) * dx + \
     rho * dot(dot(u_n, nabla_grad(u_n)), v) * dx + \
-    inner(sigma(U, p_n), epsilon(v))* dx + \
+    inner(sigma(U, p_n), epsilon(v)) * dx + \
     dot(p_n*n, v) * ds - \
     dot(mu * nabla_grad(U)*n, v) * ds - \
     dot(f, v) * dx
-    
+
 a1 = lhs(F1)
 L1 = rhs(F1)
 
