@@ -1,6 +1,9 @@
 from fenics import *
-import matplotlib.pyplot as plt
+import matplotlib as pltlib
+pltlib.use('Agg')  # To be able to plot
 import numpy as np
+from ufl.operators import nabla_div
+import matplotlib.pyplot as plt
 from mshr import *
 
 # Create a mesh and define function sapaces

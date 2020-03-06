@@ -85,19 +85,19 @@ for i in range(num_steps):
     solve(F == 0, u)
 
     # Save solution to file XDMF
-    _u_1, _u_2, _u_3 = u.split()
+    _u_1, _u_2, _u_3 = u.split() # For plot and postprocessing
     xdmf_file_u_1.write(_u_1, t)
     xdmf_file_u_2.write(_u_2, t)
     xdmf_file_u_3.write(_u_3, t)
 
     plt.figure(1)
-    plt.subplot(1,3,1)
+    plt.subplot(3,1,1)
     plot(u_1, title='Concentration A')
 
-    plt.subplot(1,3,2)
+    plt.subplot(3,1,2)
     plot(u_2, title='Concentration B')
 
-    plt.subplot(1,3,3)
+    plt.subplot(3,1,3)
     plot(u_3, title='Concentration C')
 
 
