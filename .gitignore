@@ -1,3 +1,5 @@
 Notes.yaml
 *.vscode
 Examples_HowToDo.py
+*.ipynb
+meshtest.png
