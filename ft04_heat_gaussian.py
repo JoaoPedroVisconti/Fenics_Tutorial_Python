@@ -47,5 +47,6 @@ for n in range(num_steps):
 
     u_n.assign(u) # Updating the previous step
 
+plt.show()
 plt.savefig("heat_gaussian/heat_gaussian.png")
 

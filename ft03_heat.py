@@ -1,7 +1,7 @@
 # Test Problem 1: A Known analytical solution
 from fenics import *
-import matplotlib as pltlib
-pltlib.use('Agg') # To be able to plot
+# import matplotlib as pltlib
+# pltlib.use('Agg') # To be able to plot
 import matplotlib.pyplot as plt
 from ufl.operators import nabla_div
 import numpy as np
@@ -65,5 +65,7 @@ for n in range (num_steps):
     u_e = interpolate(u_D, V)
     error = np.abs(u_e.vector().get_local() - u.vector().get_local()).max()
     print('t = %.2f: error = %.3g' % (t, error))
+
+plt.show()
 
 plt.savefig('heat/heat.png')

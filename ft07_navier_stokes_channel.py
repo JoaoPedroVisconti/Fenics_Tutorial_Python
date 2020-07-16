@@ -1,6 +1,6 @@
 from fenics import *
-import matplotlib as pltlib
-pltlib.use('Agg')  # To be able to plot
+# import matplotlib as pltlib
+# pltlib.use('Agg')  # To be able to plot
 import numpy as np
 from ufl.operators import nabla_div
 import matplotlib.pyplot as plt
@@ -144,5 +144,8 @@ for n in range(num_steps):
     u_n.assign(u_)
     p_n.assign(p_)
 
+
+plt.show()
 # Save figure
-plt.savefig('navier_stokes_channel/navier_stokes_channel.png')
+plt.savefig('\\navier_stokes_channel\\navier_stokes_channel.png')
+

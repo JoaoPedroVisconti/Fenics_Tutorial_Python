@@ -1,6 +1,6 @@
 from fenics import *
-import matplotlib as pltlib
-pltlib.use('Agg') # To be able to plot
+# import matplotlib as pltlib
+# #pltlib.use('Agg') # To be able to plot
 import matplotlib.pyplot as plt
 from ufl.operators import nabla_div
 import numpy as np
@@ -77,5 +77,8 @@ plot(u_magnitude, "Displacement magnitude")
 plt.savefig("elasticity/displacement_magnitude.png")
 xdmf_file_mag = XDMFFile("elasticity/displacement_magnitude.xdmf")
 xdmf_file_mag.write(u_magnitude)
+
+
+plt.show()
 
 print('min/max u:', u_magnitude.vector().get_local().min(), u_magnitude.vector().get_local().max())

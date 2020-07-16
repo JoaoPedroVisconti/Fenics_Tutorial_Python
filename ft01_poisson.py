@@ -1,6 +1,6 @@
 from fenics import *
 import matplotlib as pltlib
-pltlib.use('Agg')  # To be able to plot
+#pltlib.use('Agg')  # To be able to plot
 import numpy as np
 from ufl.operators import nabla_div
 import matplotlib.pyplot as plt
@@ -85,6 +85,6 @@ print("Error_max = ", error_max)
 
 
 # Plot
-# plt.show()
+plt.show()
 # plt.interactive(True) 
 plt.savefig("poisson/poisson.png")
